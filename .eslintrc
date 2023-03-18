@@ -1,13 +1,25 @@
 {
-    "extends": ["eslint:recommended", "plugin:prettier/recommended"],
-    "rules": {
-      "prettier/prettier": ["error", {
-        "printWidth": 80,
-        "tabWidth": 2,
-        "singleQuote": true,
-        "trailingComma": "es5",
-        "semi": false
-      }]
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
     }
+  },
+  "plugins": ["react"],
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "rules": {
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-props-no-spreading": "off",
+    "indent": ["error", 2],
+    "quotes": ["error", "single", { "avoidEscape": true }],
+    "semi": ["error", "always"],
+    "no-console": "error",
+    "no-undef": "off"
   }
+}
+
   
